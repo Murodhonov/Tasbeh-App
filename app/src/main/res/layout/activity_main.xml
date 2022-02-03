@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C686C1F4"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/action"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/top"
+        android:elevation="4sp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@id/swiper"
+        app:layout_constraintHeight_percent="0.100"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_setting"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="15sp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sett" />
+
+        <TextView
+            android:id="@+id/title_app"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Tasbeh dasturi"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/btn_help"
+            android:layout_width="50sp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/help"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"
+            tools:ignore="MissingPrefix" />
+
+    </LinearLayout>
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action"
+        tools:ignore="MissingClass">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C686C1F4">
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#B900897B"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.01" />
+
+            <LinearLayout
+                android:id="@+id/bigger"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/circle"
+                app:layout_constraintBottom_toTopOf="@id/smaller"
+                app:layout_constraintHeight_percent="0.100"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.2">
+
+                <TextView
+                    android:id="@+id/big_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smaller"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/circle"
+                app:layout_constraintHeight_percent="0.100"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bigger"
+                app:layout_constraintWidth_percent="0.2">
+
+                <TextView
+                    android:id="@+id/second_big_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/smaller2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/circle"
+                app:layout_constraintBottom_toTopOf="@id/smaller3"
+                app:layout_constraintHeight_percent="0.100"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/smaller5"
+                app:layout_constraintWidth_percent="0.2">
+
+                <TextView
+                    android:id="@+id/third_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smaller3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/circle"
+                app:layout_constraintBottom_toTopOf="@id/smaller4"
+                app:layout_constraintHeight_percent="0.100"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/smaller2"
+                app:layout_constraintWidth_percent="0.2">
+
+                <TextView
+                    android:id="@+id/four_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smaller4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/circle"
+                app:layout_constraintBottom_toTopOf="@id/smaller5"
+                app:layout_constraintHeight_percent="0.100"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/smaller3"
+                app:layout_constraintWidth_percent="0.2">
+
+                <TextView
+                    android:id="@+id/five_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smaller5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/circle"
+                app:layout_constraintBottom_toTopOf="@id/smaller6"
+                app:layout_constraintHeight_percent="0.100"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/smaller4"
+                app:layout_constraintWidth_percent="0.2">
+
+                <TextView
+                    android:id="@+id/six_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smaller6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.100"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/smaller5"
+                app:layout_constraintWidth_percent="0.2">
+
+                <TextView
+                    android:id="@+id/seven_big"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
